@@ -11,18 +11,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ground:  #16203F;
-    --raised:  #1E2B59;   /* navy resmi RPN */
-    --line:    #33417A;
-    --paper:   #EDEFF7;
-    --muted:   #98A2C4;
-    --aksen:   #0094CE;   /* biru muda resmi RPN */
+    --latar:     #FFFFFF;
+    --permukaan: #F4F6FB;
+    --garis:     #C3CDDF;
+    --teks:      #1E2B59;   /* navy resmi RPN */
+    --redup:     #5A6A93;
+    --aksen:     #0094CE;   /* biru muda resmi RPN -- elemen besar saja */
+    --aksen-tks: #0077A8;   /* versi digelapkan, lolos AA untuk teks kecil */
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--ground);
-    color: var(--paper);
+    background: var(--latar);
+    color: var(--teks);
     font: 400 1rem/1.6 Karla, system-ui, sans-serif;
     -webkit-text-size-adjust: 100%;
   }
@@ -30,7 +31,6 @@
 
   .logo {
     display: block; height: 4.5rem; width: auto;
-    background: #fff; padding: .5rem .7rem; border-radius: 3px;
     margin: 0 0 2rem;
   }
   .nama {
@@ -40,27 +40,27 @@
   }
   .gelar { font-style: italic; font-weight: 400; color: var(--aksen); }
   .jabatan { margin: 0 0 .35rem; max-width: 26ch; }
-  .kantor  { margin: 0; color: var(--muted); }
+  .kantor  { margin: 0; color: var(--redup); }
 
   .aksi { display: grid; gap: .6rem; margin: 2.5rem 0; }
   a.tombol {
     display: block; padding: .95rem 1.15rem;
-    border: 1px solid var(--line); border-radius: 3px;
-    color: var(--paper); text-decoration: none; background: var(--raised);
+    border: 1px solid var(--garis); border-radius: 3px;
+    color: var(--teks); text-decoration: none; background: var(--permukaan);
   }
-  a.simpan { background: var(--paper); border-color: var(--paper); color: var(--ground); font-weight: 600; }
-  a.tombol:hover { border-color: var(--aksen); }
-  a:focus-visible { outline: 2px solid var(--aksen); outline-offset: 3px; }
+  a.simpan { background: var(--teks); border-color: var(--teks); color: #fff; font-weight: 600; }
+  a.tombol:hover { border-color: var(--aksen-tks); }
+  a:focus-visible { outline: 2px solid var(--aksen-tks); outline-offset: 3px; }
 
-  dl { margin: 0; border-top: 1px solid var(--line); }
-  div.baris { display: flex; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
-  dt { flex: 0 0 5.5rem; color: var(--muted); font-size: .875rem; padding-top: .1rem; }
+  dl { margin: 0; border-top: 1px solid var(--garis); }
+  div.baris { display: flex; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--garis); }
+  dt { flex: 0 0 5.5rem; color: var(--redup); font-size: .875rem; padding-top: .1rem; }
   dd { margin: 0; flex: 1; overflow-wrap: anywhere; }
-  dd a { color: var(--paper); text-decoration-color: var(--line); text-underline-offset: 3px; }
+  dd a { color: var(--aksen-tks); text-decoration-color: var(--garis); text-underline-offset: 3px; }
 
   figure { margin: 3rem 0 0; text-align: center; }
-  figure img { width: 11rem; height: auto; background: #fff; padding: .6rem; border-radius: 3px; }
-  figcaption { color: var(--muted); font-size: .875rem; margin-top: .85rem; }
+  figure img { width: 11rem; height: auto; background: #fff; border: 1px solid var(--garis); padding: .6rem; border-radius: 3px; }
+  figcaption { color: var(--redup); font-size: .875rem; margin-top: .85rem; }
 </style>
 </head>
 <body>
