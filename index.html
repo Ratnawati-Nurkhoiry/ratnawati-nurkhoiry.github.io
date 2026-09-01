@@ -11,12 +11,12 @@
 <link href="https://fonts.googleapis.com/css2?family=Petrona:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ground:  #0E2A20;
-    --raised:  #14382B;
-    --line:    #2A5443;
-    --paper:   #EDE8DA;
-    --muted:   #90A99B;
-    --bark:    #C9862F;
+    --ground:  #16203F;
+    --raised:  #1E2B59;   /* navy resmi RPN */
+    --line:    #33417A;
+    --paper:   #EDEFF7;
+    --muted:   #98A2C4;
+    --aksen:   #0094CE;   /* biru muda resmi RPN */
   }
   * { box-sizing: border-box; }
   body {
@@ -28,12 +28,17 @@
   }
   main { max-width: 32rem; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
 
+  .logo {
+    display: block; height: 4.5rem; width: auto;
+    background: #fff; padding: .5rem .7rem; border-radius: 3px;
+    margin: 0 0 2rem;
+  }
   .nama {
     font: 600 clamp(2.6rem, 11vw, 3.9rem)/1.02 Petrona, Georgia, serif;
     letter-spacing: -0.02em;
     margin: 0 0 1.25rem;
   }
-  .gelar { font-style: italic; font-weight: 400; color: var(--bark); }
+  .gelar { font-style: italic; font-weight: 400; color: var(--aksen); }
   .jabatan { margin: 0 0 .35rem; max-width: 26ch; }
   .kantor  { margin: 0; color: var(--muted); }
 
@@ -43,9 +48,9 @@
     border: 1px solid var(--line); border-radius: 3px;
     color: var(--paper); text-decoration: none; background: var(--raised);
   }
-  a.simpan { background: var(--bark); border-color: var(--bark); color: #17130A; font-weight: 600; }
-  a.tombol:hover { border-color: var(--bark); }
-  a:focus-visible { outline: 2px solid var(--bark); outline-offset: 3px; }
+  a.simpan { background: var(--paper); border-color: var(--paper); color: var(--ground); font-weight: 600; }
+  a.tombol:hover { border-color: var(--aksen); }
+  a:focus-visible { outline: 2px solid var(--aksen); outline-offset: 3px; }
 
   dl { margin: 0; border-top: 1px solid var(--line); }
   div.baris { display: flex; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
@@ -60,6 +65,7 @@
 </head>
 <body>
 <main>
+  <img class="logo" src="logo.png" alt="Logo PT Riset Perkebunan Nusantara" onerror="this.remove()">
   <h1 class="nama">Ratnawati Nurkhoiry<span class="gelar">, M.Sc</span></h1>
   <p class="jabatan">Kepala Bagian Tata Usaha Riset, Inovasi, dan Sustainability / Peneliti Sosio Tekno Ekonomi</p>
   <p class="kantor">PT Riset Perkebunan Nusantara</p>
